@@ -73,9 +73,7 @@ export default clerkMiddleware(async (auth, req) => {
 
 export const config = {
   matcher: [
-    "/dashboard/:path*",
-    "/account/:path*",
-    "/transaction/:path*",
-    "/api/:path*",
+    "/((?!_next|.*\\..*).*)",
+    "/(api|trpc)(.*)",
   ],
 };
